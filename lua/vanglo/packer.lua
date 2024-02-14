@@ -21,7 +21,14 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use("nvim-treesitter/nvim-treesitter", {run = "TSUpdate"})
   use("nvim-treesitter/playground")
-  use("theprimeagen/harpoon")
+
+  -- harpoon for focused file switching
+  use "nvim-lua/plenary.nvim"
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
 
   use("mbbill/undotree")
   use("tpope/vim-fugitive")

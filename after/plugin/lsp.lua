@@ -7,7 +7,6 @@ lsp.ensure_installed({
   'rust_analyzer',
   'marksman',
   'lua_ls',
-  'fortrls',
   'gopls'
 })
 
