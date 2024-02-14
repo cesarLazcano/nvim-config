@@ -1,1 +1,1 @@
-require("vanglo")
+require("ceez")
