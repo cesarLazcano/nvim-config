@@ -3,11 +3,12 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
+  'ts_ls',
   'rust_analyzer',
   'marksman',
   'lua_ls',
-  'gopls'
+  'gopls',
+  'clangd'
 })
 
 
@@ -74,7 +75,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities();
 require('lspconfig').lua_ls.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
+   -- on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
   settings = {
